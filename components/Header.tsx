@@ -1,35 +1,36 @@
 import Image from "next/image";
 import { site } from "@/lib/site";
-import { Container } from "./Container";
-
-const nav = [
-  { href: "#music", label: "Music" },
-  { href: "#lyrics", label: "Lyrics" },
-  { href: "#about", label: "About" },
-  { href: "#contact", label: "Contact" },
-];
+import { SpotifyIcon } from "./Icons";
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-20 border-b border-line/70 bg-bg/85 backdrop-blur">
-      <Container className="flex h-14 items-center justify-between">
-        <a href="#top" className="flex items-center gap-3">
-          <Image src="/brand/ouroboros.png" alt="" width={28} height={28} className="mark size-7" priority />
-          <span className="display hidden text-xl sm:inline">{site.name}</span>
-          <span className="sr-only">{site.name}, back to top</span>
+    <header className="pointer-events-none fixed inset-x-0 top-3 z-20 flex justify-center px-3 sm:top-5">
+      <nav
+        aria-label="Site"
+        className="pointer-events-auto flex items-center gap-1 rounded-full border border-hairline bg-[rgba(9,9,11,0.6)] p-1.5 pl-3 backdrop-blur-xl"
+      >
+        <a href="#top" className="flex items-center gap-2 pr-2">
+          <Image src="/brand/ouroboros.png" alt="" width={24} height={24} className="size-6" priority />
+          <span className="display text-base">{site.name}</span>
+          <span className="sr-only">, back to top</span>
         </a>
-        <nav aria-label="Sections">
-          <ul className="flex items-center gap-5 text-sm sm:gap-7">
-            {nav.map((n) => (
-              <li key={n.href}>
-                <a href={n.href} className="py-2 text-muted transition-colors hover:text-fg">
-                  {n.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </Container>
+        <a href="#music" className="hidden px-3 py-2 text-sm text-ink-dim transition-colors hover:text-ink sm:inline">
+          Music
+        </a>
+        <a href="#bio" className="hidden px-3 py-2 text-sm text-ink-dim transition-colors hover:text-ink sm:inline">
+          Bio
+        </a>
+        <a
+          href={site.links.spotify}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="ml-1 inline-flex h-9 items-center gap-2 rounded-full bg-[#1ED760] px-4 text-sm font-semibold text-[#060607] transition-[filter] hover:brightness-110"
+        >
+          <SpotifyIcon className="size-4" />
+          Listen
+          <span className="sr-only"> on Spotify (opens in a new tab)</span>
+        </a>
+      </nav>
     </header>
   );
 }

@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
-import { Big_Shoulders, Instrument_Sans } from "next/font/google";
+import { Bricolage_Grotesque, Geist } from "next/font/google";
 import { site } from "@/lib/site";
 import "./globals.css";
 
-const display = Big_Shoulders({
+const display = Bricolage_Grotesque({
   subsets: ["latin"],
   weight: "variable",
-  axes: ["opsz"],
+  axes: ["opsz", "wdth"],
   variable: "--font-display",
   display: "swap",
 });
 
-const body = Instrument_Sans({
+const body = Geist({
   subsets: ["latin"],
   weight: "variable",
   variable: "--font-body",

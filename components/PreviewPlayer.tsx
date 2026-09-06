@@ -61,7 +61,7 @@ export function PreviewPlayer({ src, title }: { src: string; title: string }) {
         type="button"
         onClick={toggle}
         aria-pressed={playing}
-        className="group inline-flex h-11 items-center gap-3 rounded-full bg-accent-fill pl-1.5 pr-5 text-sm font-semibold text-accent-fg transition-[filter] hover:brightness-110"
+        className="group inline-flex h-12 items-center gap-3 rounded-full border border-hairline bg-card pl-1.5 pr-5 font-semibold text-ink transition-colors hover:border-tungsten/60"
       >
         <span className="relative grid size-8 place-items-center">
           <svg viewBox="0 0 36 36" className="absolute inset-0 size-8 -rotate-90" aria-hidden="true">
@@ -83,7 +83,7 @@ export function PreviewPlayer({ src, title }: { src: string; title: string }) {
         <span>{playing ? "Pause" : `Play 30 seconds of ${title}`}</span>
       </button>
       {failed ? (
-        <p role="status" className="text-sm text-muted">
+        <p role="status" className="text-sm text-ink-faint">
           The preview didn&rsquo;t load. Listen on Spotify or Apple Music instead.
         </p>
       ) : null}

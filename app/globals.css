@@ -1,55 +1,35 @@
 @import "tailwindcss";
 
-/* Palette from: the kitchen on the Cut It Shorter cover — one tungsten bulb over cream tile,
-   sepia-stained plaster, a bleached towel with hair clippings on it, a soot-black jacket. */
+/* Dark only. Palette from: the I WANNA DIE mark (white line on black) and the tungsten bulb
+   on the Cut It Shorter cover. Platform cards carry their own brand colours. */
 :root {
-  --soot: #100c09;
-  --plaster: #2a2119;
+  --bg: #060607;
+  --bg-card: #0e0d0f;
+  --hairline: rgba(244, 239, 233, 0.09);
+  --ink: #f4efe9;
+  --ink-dim: rgba(244, 239, 233, 0.72);
+  --ink-faint: rgba(244, 239, 233, 0.56);
+  --ember: #ffb03a;
   --tungsten: #d9a24f;
-  --towel: #e9dcc3;
-  --tile: #f4ecdc;
-
-  /* light: sun-bleached paper */
-  --bg: var(--tile);
-  --fg: #1a1410;
-  --muted: #6b5a48;
-  --line: #d6c8ab;
-  --surface: #ebe1ca;
-  --accent: #8a5d12;
-  --accent-fill: #d29a3f;
-  --accent-fg: #1a1410;
-  --glow: rgba(176, 120, 31, 0.25);
-  --mark-filter: invert(1) brightness(0.15);
-  color-scheme: light;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: var(--soot);
-    --fg: var(--towel);
-    --muted: #9c8466;
-    --line: var(--plaster);
-    --surface: #191310;
-    --accent: var(--tungsten);
-    --accent-fill: var(--tungsten);
-    --accent-fg: var(--soot);
-    --glow: rgba(217, 162, 79, 0.28);
-    --mark-filter: none;
-    color-scheme: dark;
-  }
+  --painted-sky:
+    radial-gradient(ellipse 120% 80% at 50% 118%, rgba(217, 162, 79, 0.22), transparent 62%),
+    radial-gradient(ellipse 70% 55% at 8% -8%, rgba(255, 176, 58, 0.1), transparent 60%),
+    var(--bg);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  color-scheme: dark;
 }
 
 @theme inline {
   --color-bg: var(--bg);
-  --color-fg: var(--fg);
-  --color-muted: var(--muted);
-  --color-line: var(--line);
-  --color-surface: var(--surface);
-  --color-accent: var(--accent);
-  --color-accent-fill: var(--accent-fill);
-  --color-accent-fg: var(--accent-fg);
+  --color-card: var(--bg-card);
+  --color-hairline: var(--hairline);
+  --color-ink: var(--ink);
+  --color-ink-dim: var(--ink-dim);
+  --color-ink-faint: var(--ink-faint);
+  --color-ember: var(--ember);
+  --color-tungsten: var(--tungsten);
   --font-sans: var(--font-body), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-display), "Arial Narrow", Impact, sans-serif;
+  --font-display: var(--font-display), Impact, "Arial Narrow", sans-serif;
 }
 
 html {
@@ -59,51 +39,113 @@ html {
 
 body {
   background: var(--bg);
-  color: var(--fg);
+  color: var(--ink);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
+body.no-gl {
+  background: var(--painted-sky);
+  background-attachment: fixed;
+}
 
 ::selection {
-  background: var(--accent-fill);
-  color: var(--accent-fg);
+  background: var(--tungsten);
+  color: var(--bg);
 }
 
 :focus-visible {
-  outline: 2px solid var(--accent);
+  outline: 2px solid var(--ember);
   outline-offset: 3px;
-  border-radius: 2px;
+  border-radius: 4px;
 }
 
 .wordmark {
   font-family: var(--font-display);
-  font-weight: 900;
-  line-height: 0.82;
-  letter-spacing: -0.015em;
+  font-weight: 800;
+  font-variation-settings: "wdth" 78, "opsz" 96;
+  line-height: 0.86;
+  letter-spacing: -0.02em;
   text-transform: uppercase;
 }
 
 .display {
   font-family: var(--font-display);
-  font-weight: 800;
-  line-height: 0.95;
-  letter-spacing: 0.005em;
-  text-transform: uppercase;
+  font-weight: 700;
+  font-variation-settings: "wdth" 84, "opsz" 48;
+  line-height: 1;
+  letter-spacing: -0.01em;
 }
 
-.mark {
-  filter: var(--mark-filter);
+/* The one orchestrated moment: mark, wordmark, cards. */
+@keyframes rise {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: none; }
 }
-
+@keyframes appear {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 @keyframes turn {
   to { transform: rotate(360deg); }
 }
-.turning {
-  animation: turn 240s linear infinite;
+.rise { animation: rise 1.1s var(--ease-out) both; }
+.appear { animation: appear 1.6s var(--ease-out) both; }
+.turning { animation: turn 180s linear infinite; }
+
+/* Platform card: brand colour lives in --plat and drives everything. */
+.plat {
+  --plat: var(--ember);
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border: 1px solid var(--hairline);
+  background: var(--bg-card);
+  transition:
+    border-color 0.5s var(--ease-out),
+    transform 0.35s var(--ease-out),
+    box-shadow 0.5s var(--ease-out);
+}
+.plat::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(
+    420px circle at 20% 0%,
+    color-mix(in srgb, var(--plat) 22%, transparent),
+    transparent 62%
+  );
+  opacity: 0.55;
+  transition: opacity 0.5s var(--ease-out);
+}
+.plat:hover,
+.plat:focus-visible {
+  border-color: color-mix(in srgb, var(--plat) 55%, transparent);
+  box-shadow: 0 30px 70px -32px color-mix(in srgb, var(--plat) 70%, transparent);
+  transform: translateY(-2px);
+}
+.plat:hover::before,
+.plat:focus-visible::before {
+  opacity: 1;
+}
+.plat .plat-icon {
+  color: var(--plat);
+}
+.plat .plat-go {
+  border: 1px solid var(--hairline);
+  color: var(--ink-faint);
+  transition: background-color 0.4s var(--ease-out), color 0.4s var(--ease-out), border-color 0.4s var(--ease-out);
+}
+.plat:hover .plat-go,
+.plat:focus-visible .plat-go {
+  background: var(--plat);
+  border-color: var(--plat);
+  color: #060607;
 }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .turning { animation: none; }
+  .turning, .rise, .appear { animation: none; }
+  .plat, .plat::before, .plat .plat-go { transition: none; }
 }
