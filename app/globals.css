@@ -1,26 +1,109 @@
 @import "tailwindcss";
 
+/* Palette from: the kitchen on the Cut It Shorter cover — one tungsten bulb over cream tile,
+   sepia-stained plaster, a bleached towel with hair clippings on it, a soot-black jacket. */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  --soot: #100c09;
+  --plaster: #2a2119;
+  --tungsten: #d9a24f;
+  --towel: #e9dcc3;
+  --tile: #f4ecdc;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* light: sun-bleached paper */
+  --bg: var(--tile);
+  --fg: #1a1410;
+  --muted: #6b5a48;
+  --line: #d6c8ab;
+  --surface: #ebe1ca;
+  --accent: #8a5d12;
+  --accent-fill: #d29a3f;
+  --accent-fg: #1a1410;
+  --glow: rgba(176, 120, 31, 0.25);
+  --mark-filter: invert(1) brightness(0.15);
+  color-scheme: light;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --bg: var(--soot);
+    --fg: var(--towel);
+    --muted: #9c8466;
+    --line: var(--plaster);
+    --surface: #191310;
+    --accent: var(--tungsten);
+    --accent-fill: var(--tungsten);
+    --accent-fg: var(--soot);
+    --glow: rgba(217, 162, 79, 0.28);
+    --mark-filter: none;
+    color-scheme: dark;
   }
 }
 
+@theme inline {
+  --color-bg: var(--bg);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-surface: var(--surface);
+  --color-accent: var(--accent);
+  --color-accent-fill: var(--accent-fill);
+  --color-accent-fg: var(--accent-fg);
+  --font-sans: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-display), "Arial Narrow", Impact, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--accent-fill);
+  color: var(--accent-fg);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.wordmark {
+  font-family: var(--font-display);
+  font-weight: 900;
+  line-height: 0.82;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
+}
+
+.display {
+  font-family: var(--font-display);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: 0.005em;
+  text-transform: uppercase;
+}
+
+.mark {
+  filter: var(--mark-filter);
+}
+
+@keyframes turn {
+  to { transform: rotate(360deg); }
+}
+.turning {
+  animation: turn 240s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .turning { animation: none; }
 }

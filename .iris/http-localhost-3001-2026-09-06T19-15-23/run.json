@@ -1,0 +1,461 @@
+{
+  "id": "http-localhost-3001-2026-09-06T19-15-23",
+  "kind": "look",
+  "target": "http://localhost:3001/",
+  "url": "http://localhost:3001/",
+  "dir": ".iris/http-localhost-3001-2026-09-06T19-15-23",
+  "shots": [
+    {
+      "viewport": "phone",
+      "theme": "dark",
+      "file": "phone-dark.png",
+      "path": ".iris/http-localhost-3001-2026-09-06T19-15-23/phone-dark.png",
+      "bytes": 165650,
+      "violations": [
+        {
+          "rule": "unreachable-control",
+          "severity": "high",
+          "selector": "div#devtools-indicator > div > div > div",
+          "text": "",
+          "detail": "looks clickable (cursor:pointer) but is not keyboard-reachable — no tabindex, and not a native <button>/<a>, so a keyboard user cannot Tab to it and a screen reader will not announce it as a control. Add tabindex=\"0\" + role=\"button\" and an Enter/Space handler."
+        }
+      ],
+      "counts": {
+        "unreachable-control": 1
+      },
+      "console": []
+    },
+    {
+      "viewport": "phone",
+      "theme": "light",
+      "file": "phone-light.png",
+      "path": ".iris/http-localhost-3001-2026-09-06T19-15-23/phone-light.png",
+      "bytes": 166394,
+      "violations": [
+        {
+          "rule": "unreachable-control",
+          "severity": "high",
+          "selector": "div#devtools-indicator > div > div > div",
+          "text": "",
+          "detail": "looks clickable (cursor:pointer) but is not keyboard-reachable — no tabindex, and not a native <button>/<a>, so a keyboard user cannot Tab to it and a screen reader will not announce it as a control. Add tabindex=\"0\" + role=\"button\" and an Enter/Space handler."
+        }
+      ],
+      "counts": {
+        "unreachable-control": 1
+      },
+      "console": []
+    },
+    {
+      "viewport": "tablet",
+      "theme": "dark",
+      "file": "tablet-dark.png",
+      "path": ".iris/http-localhost-3001-2026-09-06T19-15-23/tablet-dark.png",
+      "bytes": 319662,
+      "violations": [
+        {
+          "rule": "clipped",
+          "severity": "high",
+          "selector": "section.relative.overflow-hidden > div.mx-auto.w-full > div.relative > img.mark.turning",
+          "text": "",
+          "detail": "extends 91px past the right edge of the 834px viewport",
+          "rect": [
+            -76,
+            7,
+            1001,
+            1001
+          ]
+        },
+        {
+          "rule": "clipped",
+          "severity": "high",
+          "selector": "section.relative.overflow-hidden > div.mx-auto.w-full > div.relative > img.mark.turning",
+          "text": "",
+          "detail": "extends 76px past the left edge of the 834px viewport",
+          "rect": [
+            -76,
+            7,
+            1001,
+            1001
+          ]
+        },
+        {
+          "rule": "unreachable-control",
+          "severity": "high",
+          "selector": "div#devtools-indicator > div > div > div",
+          "text": "",
+          "detail": "looks clickable (cursor:pointer) but is not keyboard-reachable — no tabindex, and not a native <button>/<a>, so a keyboard user cannot Tab to it and a screen reader will not announce it as a control. Add tabindex=\"0\" + role=\"button\" and an Enter/Space handler."
+        }
+      ],
+      "counts": {
+        "clipped": 2,
+        "unreachable-control": 1
+      },
+      "console": []
+    },
+    {
+      "viewport": "tablet",
+      "theme": "light",
+      "file": "tablet-light.png",
+      "path": ".iris/http-localhost-3001-2026-09-06T19-15-23/tablet-light.png",
+      "bytes": 322389,
+      "violations": [
+        {
+          "rule": "clipped",
+          "severity": "high",
+          "selector": "section.relative.overflow-hidden > div.mx-auto.w-full > div.relative > img.mark.turning",
+          "text": "",
+          "detail": "extends 91px past the right edge of the 834px viewport",
+          "rect": [
+            -76,
+            7,
+            1001,
+            1001
+          ]
+        },
+        {
+          "rule": "clipped",
+          "severity": "high",
+          "selector": "section.relative.overflow-hidden > div.mx-auto.w-full > div.relative > img.mark.turning",
+          "text": "",
+          "detail": "extends 76px past the left edge of the 834px viewport",
+          "rect": [
+            -76,
+            7,
+            1001,
+            1001
+          ]
+        },
+        {
+          "rule": "unreachable-control",
+          "severity": "high",
+          "selector": "div#devtools-indicator > div > div > div",
+          "text": "",
+          "detail": "looks clickable (cursor:pointer) but is not keyboard-reachable — no tabindex, and not a native <button>/<a>, so a keyboard user cannot Tab to it and a screen reader will not announce it as a control. Add tabindex=\"0\" + role=\"button\" and an Enter/Space handler."
+        }
+      ],
+      "counts": {
+        "clipped": 2,
+        "unreachable-control": 1
+      },
+      "console": []
+    },
+    {
+      "viewport": "desktop",
+      "theme": "dark",
+      "file": "desktop-dark.png",
+      "path": ".iris/http-localhost-3001-2026-09-06T19-15-23/desktop-dark.png",
+      "bytes": 340067,
+      "violations": [
+        {
+          "rule": "unreachable-control",
+          "severity": "high",
+          "selector": "div#devtools-indicator > div > div > div",
+          "text": "",
+          "detail": "looks clickable (cursor:pointer) but is not keyboard-reachable — no tabindex, and not a native <button>/<a>, so a keyboard user cannot Tab to it and a screen reader will not announce it as a control. Add tabindex=\"0\" + role=\"button\" and an Enter/Space handler."
+        }
+      ],
+      "counts": {
+        "unreachable-control": 1
+      },
+      "console": []
+    },
+    {
+      "viewport": "desktop",
+      "theme": "light",
+      "file": "desktop-light.png",
+      "path": ".iris/http-localhost-3001-2026-09-06T19-15-23/desktop-light.png",
+      "bytes": 342487,
+      "violations": [
+        {
+          "rule": "unreachable-control",
+          "severity": "high",
+          "selector": "div#devtools-indicator > div > div > div",
+          "text": "",
+          "detail": "looks clickable (cursor:pointer) but is not keyboard-reachable — no tabindex, and not a native <button>/<a>, so a keyboard user cannot Tab to it and a screen reader will not announce it as a control. Add tabindex=\"0\" + role=\"button\" and an Enter/Space handler."
+        }
+      ],
+      "counts": {
+        "unreachable-control": 1
+      },
+      "console": []
+    }
+  ],
+  "design": {
+    "findings": [
+      {
+        "rule": "type-scale",
+        "severity": "design",
+        "detail": "7 distinct font sizes in use — 14px, 16px, 18px, 20px, 24px, 60px, 176px. A type scale is 6 sizes or fewer; the rest are sizes nobody chose. Pick a scale and round everything to it.",
+        "values": [
+          {
+            "value": 14,
+            "count": 18
+          },
+          {
+            "value": 16,
+            "count": 4
+          },
+          {
+            "value": 18,
+            "count": 33
+          },
+          {
+            "value": 20,
+            "count": 1
+          },
+          {
+            "value": 24,
+            "count": 2
+          },
+          {
+            "value": 60,
+            "count": 5
+          },
+          {
+            "value": 176,
+            "count": 1
+          }
+        ]
+      }
+    ],
+    "scales": {
+      "type": [
+        {
+          "value": 14,
+          "count": 18
+        },
+        {
+          "value": 16,
+          "count": 4
+        },
+        {
+          "value": 18,
+          "count": 33
+        },
+        {
+          "value": 20,
+          "count": 1
+        },
+        {
+          "value": 24,
+          "count": 2
+        },
+        {
+          "value": 60,
+          "count": 5
+        },
+        {
+          "value": 176,
+          "count": 1
+        }
+      ],
+      "radius": [
+        {
+          "value": 12,
+          "count": 2
+        },
+        {
+          "value": 999,
+          "count": 4
+        }
+      ],
+      "spacing": [
+        {
+          "value": 4,
+          "count": 11
+        },
+        {
+          "value": 6,
+          "count": 1
+        },
+        {
+          "value": 8,
+          "count": 32
+        },
+        {
+          "value": 12,
+          "count": 10
+        },
+        {
+          "value": 16,
+          "count": 4
+        },
+        {
+          "value": 20,
+          "count": 12
+        },
+        {
+          "value": 24,
+          "count": 3
+        },
+        {
+          "value": 28,
+          "count": 5
+        },
+        {
+          "value": 32,
+          "count": 23
+        },
+        {
+          "value": 40,
+          "count": 2
+        },
+        {
+          "value": 48,
+          "count": 16
+        },
+        {
+          "value": 64,
+          "count": 3
+        },
+        {
+          "value": 96,
+          "count": 11
+        }
+      ],
+      "weights": [
+        "400",
+        "500",
+        "600",
+        "800",
+        "900"
+      ]
+    }
+  },
+  "canvases": [],
+  "blind": {
+    "canvases": 0,
+    "iframes": 2,
+    "hover_missed": [],
+    "reasons": [
+      "2 iframes are embedded here, and every check runs against the TOP document — a frame is a separate one, audited by nobody"
+    ]
+  },
+  "violations": [
+    {
+      "rule": "unreachable-control",
+      "severity": "high",
+      "selector": "div#devtools-indicator > div > div > div",
+      "text": "",
+      "detail": "looks clickable (cursor:pointer) but is not keyboard-reachable — no tabindex, and not a native <button>/<a>, so a keyboard user cannot Tab to it and a screen reader will not announce it as a control. Add tabindex=\"0\" + role=\"button\" and an Enter/Space handler.",
+      "viewport": "phone",
+      "theme": "dark"
+    },
+    {
+      "rule": "unreachable-control",
+      "severity": "high",
+      "selector": "div#devtools-indicator > div > div > div",
+      "text": "",
+      "detail": "looks clickable (cursor:pointer) but is not keyboard-reachable — no tabindex, and not a native <button>/<a>, so a keyboard user cannot Tab to it and a screen reader will not announce it as a control. Add tabindex=\"0\" + role=\"button\" and an Enter/Space handler.",
+      "viewport": "phone",
+      "theme": "light"
+    },
+    {
+      "rule": "clipped",
+      "severity": "high",
+      "selector": "section.relative.overflow-hidden > div.mx-auto.w-full > div.relative > img.mark.turning",
+      "text": "",
+      "detail": "extends 91px past the right edge of the 834px viewport",
+      "rect": [
+        -76,
+        7,
+        1001,
+        1001
+      ],
+      "viewport": "tablet",
+      "theme": "dark"
+    },
+    {
+      "rule": "clipped",
+      "severity": "high",
+      "selector": "section.relative.overflow-hidden > div.mx-auto.w-full > div.relative > img.mark.turning",
+      "text": "",
+      "detail": "extends 76px past the left edge of the 834px viewport",
+      "rect": [
+        -76,
+        7,
+        1001,
+        1001
+      ],
+      "viewport": "tablet",
+      "theme": "dark"
+    },
+    {
+      "rule": "unreachable-control",
+      "severity": "high",
+      "selector": "div#devtools-indicator > div > div > div",
+      "text": "",
+      "detail": "looks clickable (cursor:pointer) but is not keyboard-reachable — no tabindex, and not a native <button>/<a>, so a keyboard user cannot Tab to it and a screen reader will not announce it as a control. Add tabindex=\"0\" + role=\"button\" and an Enter/Space handler.",
+      "viewport": "tablet",
+      "theme": "dark"
+    },
+    {
+      "rule": "clipped",
+      "severity": "high",
+      "selector": "section.relative.overflow-hidden > div.mx-auto.w-full > div.relative > img.mark.turning",
+      "text": "",
+      "detail": "extends 91px past the right edge of the 834px viewport",
+      "rect": [
+        -76,
+        7,
+        1001,
+        1001
+      ],
+      "viewport": "tablet",
+      "theme": "light"
+    },
+    {
+      "rule": "clipped",
+      "severity": "high",
+      "selector": "section.relative.overflow-hidden > div.mx-auto.w-full > div.relative > img.mark.turning",
+      "text": "",
+      "detail": "extends 76px past the left edge of the 834px viewport",
+      "rect": [
+        -76,
+        7,
+        1001,
+        1001
+      ],
+      "viewport": "tablet",
+      "theme": "light"
+    },
+    {
+      "rule": "unreachable-control",
+      "severity": "high",
+      "selector": "div#devtools-indicator > div > div > div",
+      "text": "",
+      "detail": "looks clickable (cursor:pointer) but is not keyboard-reachable — no tabindex, and not a native <button>/<a>, so a keyboard user cannot Tab to it and a screen reader will not announce it as a control. Add tabindex=\"0\" + role=\"button\" and an Enter/Space handler.",
+      "viewport": "tablet",
+      "theme": "light"
+    },
+    {
+      "rule": "unreachable-control",
+      "severity": "high",
+      "selector": "div#devtools-indicator > div > div > div",
+      "text": "",
+      "detail": "looks clickable (cursor:pointer) but is not keyboard-reachable — no tabindex, and not a native <button>/<a>, so a keyboard user cannot Tab to it and a screen reader will not announce it as a control. Add tabindex=\"0\" + role=\"button\" and an Enter/Space handler.",
+      "viewport": "desktop",
+      "theme": "dark"
+    },
+    {
+      "rule": "unreachable-control",
+      "severity": "high",
+      "selector": "div#devtools-indicator > div > div > div",
+      "text": "",
+      "detail": "looks clickable (cursor:pointer) but is not keyboard-reachable — no tabindex, and not a native <button>/<a>, so a keyboard user cannot Tab to it and a screen reader will not announce it as a control. Add tabindex=\"0\" + role=\"button\" and an Enter/Space handler.",
+      "viewport": "desktop",
+      "theme": "light"
+    }
+  ],
+  "console_errors": [],
+  "summary": {
+    "total": 2,
+    "high": 2,
+    "medium": 0,
+    "low": 0,
+    "aa_failures": 0,
+    "sightings": 10,
+    "console_errors": 0,
+    "passed": false
+  }
+}
