@@ -9,9 +9,11 @@ export function Footer() {
         <p>
           &copy; {new Date().getFullYear()} {site.name}
         </p>
-        <div className="flex gap-5">
+        <div className="flex flex-wrap gap-x-5 gap-y-2">
           <ServiceLink service="spotify" href={site.links.spotify} variant="quiet" />
           <ServiceLink service="appleMusic" href={site.links.appleMusic} variant="quiet" />
+          <ServiceLink service="instagram" href={site.links.instagram} variant="quiet" />
+          <ServiceLink service="tiktok" href={site.links.tiktok} variant="quiet" />
         </div>
       </Container>
     </footer>

@@ -17,7 +17,7 @@ function jsonLd() {
     url: site.url,
     genre: "Rock",
     image: `${site.url}${latest.cover}`,
-    sameAs: [site.links.spotify, site.links.appleMusic],
+    sameAs: Object.values(site.links),
     album: releases.map((r) => ({
       "@type": "MusicAlbum",
       name: r.title,

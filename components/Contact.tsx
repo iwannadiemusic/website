@@ -1,5 +1,6 @@
 import { site } from "@/lib/site";
 import { Section } from "./Container";
+import { ServiceLink } from "./ServiceLink";
 
 export function Contact() {
   return (
@@ -12,6 +13,11 @@ export function Contact() {
         >
           {site.contactEmail}
         </a>
+        <p className="mt-10">Day to day, it&rsquo;s here:</p>
+        <div className="mt-3 flex flex-wrap gap-3">
+          <ServiceLink service="instagram" href={site.links.instagram} />
+          <ServiceLink service="tiktok" href={site.links.tiktok} />
+        </div>
       </div>
     </Section>
   );

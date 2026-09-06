@@ -1,9 +1,11 @@
 import type { ReactNode } from "react";
-import { AppleIcon, SpotifyIcon } from "./Icons";
+import { AppleIcon, InstagramIcon, SpotifyIcon, TikTokIcon } from "./Icons";
 
 const services = {
   spotify: { label: "Spotify", Icon: SpotifyIcon },
   appleMusic: { label: "Apple Music", Icon: AppleIcon },
+  instagram: { label: "Instagram", Icon: InstagramIcon },
+  tiktok: { label: "TikTok", Icon: TikTokIcon },
 } as const;
 
 export type Service = keyof typeof services;
