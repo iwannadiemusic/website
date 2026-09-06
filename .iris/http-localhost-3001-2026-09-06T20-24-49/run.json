@@ -1,0 +1,207 @@
+{
+  "id": "http-localhost-3001-2026-09-06T20-24-49",
+  "kind": "look",
+  "target": "http://localhost:3001/",
+  "url": "http://localhost:3001/",
+  "dir": ".iris/http-localhost-3001-2026-09-06T20-24-49",
+  "shots": [
+    {
+      "viewport": "phone",
+      "theme": "dark",
+      "file": "phone-dark.png",
+      "path": ".iris/http-localhost-3001-2026-09-06T20-24-49/phone-dark.png",
+      "bytes": 116147,
+      "violations": [
+        {
+          "rule": "unreachable-control",
+          "severity": "high",
+          "selector": "div#devtools-indicator > div > div > div",
+          "text": "",
+          "detail": "looks clickable (cursor:pointer) but is not keyboard-reachable — no tabindex, and not a native <button>/<a>, so a keyboard user cannot Tab to it and a screen reader will not announce it as a control. Add tabindex=\"0\" + role=\"button\" and an Enter/Space handler."
+        }
+      ],
+      "counts": {
+        "unreachable-control": 1
+      },
+      "console": []
+    },
+    {
+      "viewport": "desktop",
+      "theme": "dark",
+      "file": "desktop-dark.png",
+      "path": ".iris/http-localhost-3001-2026-09-06T20-24-49/desktop-dark.png",
+      "bytes": 238429,
+      "violations": [
+        {
+          "rule": "unreachable-control",
+          "severity": "high",
+          "selector": "div#devtools-indicator > div > div > div",
+          "text": "",
+          "detail": "looks clickable (cursor:pointer) but is not keyboard-reachable — no tabindex, and not a native <button>/<a>, so a keyboard user cannot Tab to it and a screen reader will not announce it as a control. Add tabindex=\"0\" + role=\"button\" and an Enter/Space handler."
+        }
+      ],
+      "counts": {
+        "unreachable-control": 1
+      },
+      "console": []
+    }
+  ],
+  "design": {
+    "findings": [],
+    "scales": {
+      "type": [
+        {
+          "value": 14,
+          "count": 11
+        },
+        {
+          "value": 16,
+          "count": 20
+        },
+        {
+          "value": 18,
+          "count": 8
+        },
+        {
+          "value": 36,
+          "count": 8
+        },
+        {
+          "value": 48,
+          "count": 3
+        },
+        {
+          "value": 168,
+          "count": 1
+        }
+      ],
+      "radius": [
+        {
+          "value": 16,
+          "count": 1
+        },
+        {
+          "value": 24,
+          "count": 6
+        },
+        {
+          "value": 999,
+          "count": 12
+        }
+      ],
+      "spacing": [
+        {
+          "value": 4,
+          "count": 15
+        },
+        {
+          "value": 6,
+          "count": 4
+        },
+        {
+          "value": 8,
+          "count": 31
+        },
+        {
+          "value": 12,
+          "count": 19
+        },
+        {
+          "value": 16,
+          "count": 9
+        },
+        {
+          "value": 20,
+          "count": 24
+        },
+        {
+          "value": 24,
+          "count": 10
+        },
+        {
+          "value": 28,
+          "count": 24
+        },
+        {
+          "value": 32,
+          "count": 13
+        },
+        {
+          "value": 48,
+          "count": 4
+        },
+        {
+          "value": 64,
+          "count": 2
+        },
+        {
+          "value": 96,
+          "count": 7
+        }
+      ],
+      "weights": [
+        "400",
+        "600",
+        "700",
+        "800"
+      ]
+    }
+  },
+  "canvases": [
+    {
+      "backing": [
+        300,
+        150
+      ],
+      "css": [
+        390,
+        844
+      ],
+      "want": [
+        390,
+        844
+      ],
+      "dpr": 1,
+      "scale": 1.3
+    }
+  ],
+  "blind": {
+    "canvases": 0,
+    "iframes": 1,
+    "hover_missed": [],
+    "reasons": [
+      "an iframe is embedded here, and every check runs against the TOP document — a frame is a separate one, audited by nobody"
+    ]
+  },
+  "violations": [
+    {
+      "rule": "unreachable-control",
+      "severity": "high",
+      "selector": "div#devtools-indicator > div > div > div",
+      "text": "",
+      "detail": "looks clickable (cursor:pointer) but is not keyboard-reachable — no tabindex, and not a native <button>/<a>, so a keyboard user cannot Tab to it and a screen reader will not announce it as a control. Add tabindex=\"0\" + role=\"button\" and an Enter/Space handler.",
+      "viewport": "phone",
+      "theme": "dark"
+    },
+    {
+      "rule": "unreachable-control",
+      "severity": "high",
+      "selector": "div#devtools-indicator > div > div > div",
+      "text": "",
+      "detail": "looks clickable (cursor:pointer) but is not keyboard-reachable — no tabindex, and not a native <button>/<a>, so a keyboard user cannot Tab to it and a screen reader will not announce it as a control. Add tabindex=\"0\" + role=\"button\" and an Enter/Space handler.",
+      "viewport": "desktop",
+      "theme": "dark"
+    }
+  ],
+  "console_errors": [],
+  "summary": {
+    "total": 1,
+    "high": 1,
+    "medium": 0,
+    "low": 0,
+    "aa_failures": 0,
+    "sightings": 2,
+    "console_errors": 0,
+    "passed": false
+  }
+}
