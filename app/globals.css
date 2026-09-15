@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
-/* Dark only. Palette from: the I WANNA DIE mark (white line on black) and the tungsten bulb
-   on the Cut It Shorter cover. Platform cards carry their own brand colours. */
+/* Dark only. Palette from: the I WANNA DIE mark (moonlit window on black) and a tungsten
+   glow. Platform cards carry their own brand colours. */
 :root {
   --bg: #060607;
   --bg-card: #0e0d0f;
@@ -86,12 +86,8 @@ body.no-gl {
   from { opacity: 0; }
   to { opacity: 1; }
 }
-@keyframes turn {
-  to { transform: rotate(360deg); }
-}
 .rise { animation: rise 1.1s var(--ease-out) both; }
 .appear { animation: appear 1.6s var(--ease-out) both; }
-.turning { animation: turn 180s linear infinite; }
 
 /* Platform card: brand colour lives in --plat and drives everything. */
 .plat {
@@ -146,6 +142,6 @@ body.no-gl {
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .turning, .rise, .appear { animation: none; }
+  .rise, .appear { animation: none; }
   .plat, .plat::before, .plat .plat-go { transition: none; }
 }

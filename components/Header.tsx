@@ -10,7 +10,7 @@ export function Header() {
         className="pointer-events-auto flex items-center gap-1 rounded-full border border-hairline bg-[rgba(9,9,11,0.6)] p-1.5 pl-3 backdrop-blur-xl"
       >
         <a href="#top" className="flex items-center gap-2 pr-2">
-          <Image src="/brand/ouroboros.png" alt="" width={24} height={24} className="size-6" priority />
+          <Image src="/brand/logo.png" alt="" width={400} height={640} className="h-7 w-auto" priority />
           <span className="display text-base">{site.name}</span>
           <span className="sr-only">, back to top</span>
         </a>

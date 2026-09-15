@@ -2,7 +2,7 @@ export const site = {
   name: "I WANNA DIE",
   url: "https://iwannadie.music",
   description:
-    "I WANNA DIE. New single Cut It Shorter is out now. Listen on Spotify and Apple Music, follow on TikTok.",
+    "I WANNA DIE. New single Nobody Made You is out now. Listen on Spotify and Apple Music, follow on TikTok.",
   contactEmail: "iwannadiemusic@gmail.com",
   handle: "iwannadiemusic",
   links: {

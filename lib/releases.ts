@@ -14,17 +14,17 @@ export type Release = {
 
 export const releases: Release[] = [
   {
-    slug: "cut-it-shorter",
-    title: "Cut It Shorter",
+    slug: "nobody-made-you",
+    title: "Nobody Made You",
     kind: "Single",
-    date: "2026-09-03",
-    durationSeconds: 168,
-    cover: "/releases/cut-it-shorter.jpg",
-    coverThumb: "/releases/cut-it-shorter-640.jpg",
-    preview: "/audio/cut-it-shorter-preview.mp3",
+    date: "2026-09-14",
+    durationSeconds: 140,
+    cover: "/releases/nobody-made-you.jpg",
+    coverThumb: "/releases/nobody-made-you-640.jpg",
+    preview: "/audio/nobody-made-you-preview.mp3",
     links: {
       spotify: "https://open.spotify.com/artist/6zax970B9VZBUVe1574g7S",
-      appleMusic: "https://music.apple.com/tr/album/cut-it-shorter-single/6808525707",
+      appleMusic: "https://music.apple.com/tr/album/nobody-made-you-single/6812222211",
     },
   },
 ];
