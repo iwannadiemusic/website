@@ -4,11 +4,11 @@ export const site = {
   description:
     "I WANNA DIE. New single Nobody Made You is out now. Listen on Spotify and Apple Music, follow on TikTok.",
   contactEmail: "iwannadiemusic@gmail.com",
-  handle: "iwannadie.music",
+  handle: "iwannadiemusic",
   links: {
     spotify: "https://open.spotify.com/artist/6zax970B9VZBUVe1574g7S",
     appleMusic: "https://music.apple.com/tr/artist/i-wanna-die/6808376735",
-    tiktok: "https://www.tiktok.com/@iwannadie.music",
+    tiktok: "https://www.tiktok.com/@iwannadiemusic",
   },
   embeds: {
     spotifyArtist: "https://open.spotify.com/embed/artist/6zax970B9VZBUVe1574g7S",
