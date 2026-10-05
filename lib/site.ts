@@ -16,7 +16,7 @@ export const site = {
   /** Written with the artist, from his own words. No mood copy. */
   bio: [
     "Hey, I'm the guy behind I WANNA DIE. Software engineer by day. Music is my hobby, and most of it gets made after midnight.",
-    "A song's instrumental used to take me months. AI cuts that down to a fraction, so that's where I use it. I sing the songs myself, and I mix and master every track.",
+    "A song's instrumental used to take me months. AI cuts that down to a fraction, so that's where I use it. I sing the lead vocals myself, and I mix and master every track.",
     "There's a lot more on the way. Hit follow so you hear it first. Thanks for listening.",
   ],
   bioClose: "I don't really believe in \"good\" or \"bad\" as fixed things — just the choices we make every second.",
