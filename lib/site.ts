@@ -15,10 +15,9 @@ export const site = {
   },
   /** Written with the artist, from his own words. No mood copy. */
   bio: [
-    "Hey, I'm the guy behind I WANNA DIE. I live in Türkiye, and most of this gets made late at night.",
-    "AI takes care of the instrumentals for me, so my time goes where I want it: the songs, the vocals, the mix and the master.",
+    "Hey, I'm the guy behind I WANNA DIE. I'm a software engineer with a day job, and music is my hobby. Most of it gets made late at night.",
+    "Building the instrumental for a song used to take me months. AI cuts that down to a fraction, so that's what I use it for. The vocals are mine, and I do the mix and the master myself.",
     "Fair warning: the man in these songs isn't a very good person. The Obsession is about the women he got obsessed with, and the women who got obsessed with him.",
-    "Music has never been a job for me. It's something I do out of love.",
   ],
   bioClose: "I don't really believe in \"good\" or \"bad\" as fixed things — just the choices we make every second.",
 } as const;
