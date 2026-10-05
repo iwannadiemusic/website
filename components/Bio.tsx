@@ -11,7 +11,7 @@ export function Bio() {
           {site.bio.map((p, i) => (
             <p key={i}>{p}</p>
           ))}
-          <p className="display pt-2 text-4xl leading-tight text-ink">{site.bioClose}</p>
+          <p className="display whitespace-pre-line pt-2 text-4xl leading-tight text-ink">{site.bioClose}</p>
         </div>
       </div>
     </section>
