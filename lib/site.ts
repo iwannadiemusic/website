@@ -15,10 +15,9 @@ export const site = {
   },
   /** The artist's own words. Nothing here is written for the site. */
   bio: [
-    "I've been making music for almost 20 years — moving through heavy metal, blues, dark pop, synthwave, and everything in between. Music has never been just a career choice for me; it's always been something I did out of love.",
-    "I've played on stage with different bands, but chasing music for income was never my main goal. I always feared that turning it into a \"job\" would take away the love I have for it.",
-    "For years, I was searching — for my voice, my sound, and my identity as an artist.",
+    "I make the instruments with AI. The songs, the vocals, the mix and the master are mine.",
     "The Obsession is about the women I got obsessed with, and the women who got obsessed with me.",
+    "Music has never been a job for me. It's something I do out of love.",
   ],
   bioClose: "I don't really believe in \"good\" or \"bad\" as fixed things — just the choices we make every second.",
 } as const;
