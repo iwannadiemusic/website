@@ -42,11 +42,15 @@ ico = [icon(48, 3, 1.4).convert("RGBA"), icon(32, 2, 1.8).convert("RGBA"), icon(
 ico[0].save("app/favicon.ico", sizes=[(48, 48), (32, 32), (16, 16)], append_images=ico[1:])
 print("icons done")
 
-# 2) Cover art
+# 2) Cover art: every brand/<slug>-cover-source.png -> public/releases/<slug>.jpg + -640.jpg
+#    (two-seconds-dark's source is drawn by scripts/cover_two_seconds_dark.py)
+for slug in ("nobody-made-you", "two-seconds-dark"):
+    c = Image.open(f"brand/{slug}-cover-source.png").convert("RGB")
+    c.resize((1400, 1400), Image.LANCZOS).save(f"public/releases/{slug}.jpg", quality=86, optimize=True, progressive=True)
+    c.resize((640, 640), Image.LANCZOS).save(f"public/releases/{slug}-640.jpg", quality=84, optimize=True, progressive=True)
+    print("cover", slug)
+# OG 1200x630: the released single's cover, scaled so the window fills most of the height, centred on it
 cover = Image.open("brand/nobody-made-you-cover-source.png").convert("RGB")
-cover.resize((1400, 1400), Image.LANCZOS).save("public/releases/nobody-made-you.jpg", quality=86, optimize=True, progressive=True)
-cover.resize((640, 640), Image.LANCZOS).save("public/releases/nobody-made-you-640.jpg", quality=84, optimize=True, progressive=True)
-# OG 1200x630: the cover itself, scaled so the window fills most of the height, centred on it
 scale = 0.7
 big = cover.resize((round(3000 * scale), round(3000 * scale)), Image.LANCZOS)
 cx, cy = round(1500 * scale), round(1443 * scale)  # window centre in the source
