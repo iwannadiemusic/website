@@ -13,10 +13,11 @@ export const site = {
   embeds: {
     spotifyArtist: "https://open.spotify.com/embed/artist/6zax970B9VZBUVe1574g7S",
   },
-  /** The artist's own words. Nothing here is written for the site. */
+  /** Written with the artist, from his own words. No mood copy. */
   bio: [
+    "Hey, I'm the guy behind I WANNA DIE. I live in Türkiye, and most of this gets made late at night.",
     "I make the instruments with AI. The songs, the vocals, the mix and the master are mine.",
-    "The Obsession is about the women I got obsessed with, and the women who got obsessed with me.",
+    "Fair warning: the man in these songs isn't a very good person. The Obsession is about the women he got obsessed with, and the women who got obsessed with him.",
     "Music has never been a job for me. It's something I do out of love.",
   ],
   bioClose: "I don't really believe in \"good\" or \"bad\" as fixed things — just the choices we make every second.",
