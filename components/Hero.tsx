@@ -4,28 +4,27 @@ import { PlatformCards } from "./Platforms";
 
 export function Hero() {
   return (
-    <section aria-label="I WANNA DIE" className="relative overflow-x-clip">
-      <div className="mx-auto w-full max-w-5xl px-5 pb-16 pt-24 sm:px-8 sm:pt-32 lg:pb-24 lg:pt-36">
-        <div className="flex flex-col items-center text-center">
-          <figure className="hero-photo appear relative w-full max-w-[26rem] sm:max-w-[30rem]">
-            <Image
-              src="/photo/hero.webp"
-              alt="I WANNA DIE on a red velvet sofa in a lamplit room"
-              width={896}
-              height={1195}
-              priority
-              sizes="(min-width: 640px) 30rem, 100vw"
-              className="block h-auto w-full select-none"
-            />
-          </figure>
+    <section aria-label="I WANNA DIE" className="relative">
+      <div className="hero-bleed relative flex min-h-[100svh] w-full items-end overflow-hidden">
+        <Image
+          src="/photo/hero.webp"
+          alt="I WANNA DIE on a red velvet sofa in a lamplit room"
+          fill
+          priority
+          sizes="100vw"
+          className="appear select-none object-cover object-[50%_40%] lg:object-[50%_44%]"
+        />
+        <div className="relative mx-auto w-full max-w-5xl px-5 pb-10 text-center sm:px-8 sm:pb-14 lg:max-w-none lg:px-14 lg:text-right">
           <h1
-            className="wordmark rise relative -mt-[clamp(3.5rem,13vw,7.5rem)] text-[clamp(4.25rem,17vw,10.5rem)] drop-shadow-[0_6px_40px_rgba(6,6,7,0.9)]"
+            className="wordmark rise text-[clamp(4.25rem,17vw,10.5rem)] lg:text-[clamp(6rem,9vw,9rem)] drop-shadow-[0_6px_40px_rgba(6,6,7,0.85)]"
             style={{ animationDelay: "0.15s" }}
           >
             {site.name}
           </h1>
         </div>
-        <PlatformCards className="mt-12 sm:mt-16" />
+      </div>
+      <div className="relative mx-auto w-full max-w-5xl px-5 pb-16 sm:px-8 lg:pb-24">
+        <PlatformCards className="mt-6 sm:mt-10" />
       </div>
     </section>
   );
