@@ -4,18 +4,24 @@ import { PlatformCards } from "./Platforms";
 
 export function Hero() {
   return (
-    <section aria-label="I WANNA DIE" className="relative">
-      <div className="mx-auto w-full max-w-5xl px-5 pb-16 pt-28 sm:px-8 sm:pt-36 lg:pb-24 lg:pt-40">
+    <section aria-label="I WANNA DIE" className="relative overflow-x-clip">
+      <div className="mx-auto w-full max-w-5xl px-5 pb-16 pt-24 sm:px-8 sm:pt-32 lg:pb-24 lg:pt-36">
         <div className="flex flex-col items-center text-center">
-          <Image
-            src="/brand/logo.png"
-            alt=""
-            width={400}
-            height={640}
-            priority
-            className="appear h-40 w-auto select-none drop-shadow-[0_0_40px_rgba(255,176,58,0.28)] sm:h-56"
-          />
-          <h1 className="wordmark rise mt-8 text-[clamp(4.25rem,17vw,10.5rem)]" style={{ animationDelay: "0.15s" }}>
+          <figure className="hero-photo appear relative w-full max-w-[26rem] sm:max-w-[30rem]">
+            <Image
+              src="/photo/hero.webp"
+              alt="I WANNA DIE on a red velvet sofa in a lamplit room"
+              width={896}
+              height={1195}
+              priority
+              sizes="(min-width: 640px) 30rem, 100vw"
+              className="block h-auto w-full select-none"
+            />
+          </figure>
+          <h1
+            className="wordmark rise relative -mt-[clamp(3.5rem,13vw,7.5rem)] text-[clamp(4.25rem,17vw,10.5rem)] drop-shadow-[0_6px_40px_rgba(6,6,7,0.9)]"
+            style={{ animationDelay: "0.15s" }}
+          >
             {site.name}
           </h1>
         </div>
